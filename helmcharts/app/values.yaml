@@ -1,8 +1,11 @@
 ExternalSecret:
   ExternalSecretName: staging-app-variables
   create: true
+
 replicaCount: 1
+
 image:
-  repository: 415894091025.dkr.ecr.us-east-2.amazonaws.com/fdt6-application
-  tag: staging-backend-30645b2
+  repository: nginx
+  tag: latest
+  
 namespace: staging
