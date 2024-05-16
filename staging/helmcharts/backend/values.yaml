@@ -1,0 +1,11 @@
+ExternalSecret:
+  ExternalSecretName: staging-app-variables
+  create: true
+
+replicaCount: 1
+
+image:
+  repository: nginx
+  tag: latest
+  
+namespace: staging
