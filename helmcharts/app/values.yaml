@@ -4,5 +4,5 @@ ExternalSecret:
 replicaCount: 1
 image:
   repository: 415894091025.dkr.ecr.us-east-2.amazonaws.com/fdt6-application
-  tag: fdt6-react-e0046e6
+  tag: fdt6-rails-e0046e6
 namespace: staging
