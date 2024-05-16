@@ -124,8 +124,6 @@ module "ingress-controller" {
 }
 
 module "ingress-application" {
-  for_each = { for app in local.app_list : app.app_name => app  }
-  
   source                    = "../../modules/ingress-application"
   vpc_id                    = module.vpc.vpc_id
   ssl                       = local.credentials.ssl
@@ -133,7 +131,8 @@ module "ingress-application" {
   host             = each.value.domain
   default_security_group_id = module.vpc.default_security_group_id
   public_subnets            = module.vpc.public_subnets
-  app_name = each.value.app_name
+  project_name = var.project_name
+  apps = toset(local.app_list)
 
   depends_on = [
     module.kubernetes,
