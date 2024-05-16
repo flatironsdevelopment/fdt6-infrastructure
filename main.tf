@@ -170,7 +170,7 @@ module "argocd" {
   repo_helmcharts_url  = module.github_repo.github_repo_url
   slack_token          = "null"
   repo_helmcharts_name = "helmcharts"
-  argo_admin_password  = local.credentials.argo_admin_password
+  argo_admin_password  = bcrypt("${local.credentials.argo_admin_password}")
   ssl                  = local.credentials.ssl
   public_subnets       = module.vpc.public_subnets
   apps_types           = ["frontend", "backend"]
