@@ -4,5 +4,5 @@ ExternalSecret:
 replicaCount: 1
 image:
   repository: 415894091025.dkr.ecr.us-east-2.amazonaws.com/fdt6-application
-  tag: staging-backend-651ff98
+  tag: staging-backend-92fd41b
 namespace: staging
