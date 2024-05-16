@@ -23,11 +23,11 @@ output "cognito_user_pool_client_id" {
 }
 
 output "argo_hostname" {
-  value = "argo.test.com"
+  value = local.credentials.argo_domain
 }
 
 output "grafana_hostname" {
-  value = "grafana.test.com"
+  value = local.credentials.grafana_domain
 }
 
 output "access_key" {
