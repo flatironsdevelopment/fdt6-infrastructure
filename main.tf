@@ -128,7 +128,6 @@ module "ingress-application" {
   vpc_id                    = module.vpc.vpc_id
   ssl                       = local.credentials.ssl
   ingress_group_name        = var.ingress_group_name
-  host             = each.value.domain
   default_security_group_id = module.vpc.default_security_group_id
   public_subnets            = module.vpc.public_subnets
   project_name = var.project_name
