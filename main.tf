@@ -173,7 +173,7 @@ module "argocd" {
   argo_admin_password  = bcrypt("${local.credentials.argo_admin_password}")
   ssl                  = local.credentials.ssl
   public_subnets       = module.vpc.public_subnets
-  apps_types           = ["frontend", "backend"]
+  apps_types           = [for app in local.app_list: app.app_name]
   project_name         = var.project_name
   github_token         = var.github_token
   github_username      = var.github_username
