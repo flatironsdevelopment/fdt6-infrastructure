@@ -13,7 +13,7 @@ module "github_actions" {
   aws_secret_access_key = var.aws_secret_access_key
   aws_region            = var.aws_region
   github_organization = var.github_organization
-  kubernetes = false
+  kubernetes = true
   github_repo_name = module.github_repo.github_monorepo_name
   github_infrastructure_full_name = module.github_repo.github_infrastructure_full_name
   apps = toset(local.app_list)
